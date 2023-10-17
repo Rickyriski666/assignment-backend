@@ -13,6 +13,10 @@ const getProductById = async productId => {
     }
   });
 
+  if (!product) {
+    throw Error('Product Not Found');
+  }
+
   return product;
 };
 
